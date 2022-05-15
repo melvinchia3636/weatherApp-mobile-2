@@ -15,7 +15,7 @@ import {
   Nunito_600SemiBold,
   Nunito_700Bold,
 } from "@expo-google-fonts/dev";
-import { FontAwesome, Feather } from "@expo/vector-icons";
+import { FontAwesome, FontAwesome5, Feather } from "@expo/vector-icons";
 import moment from "moment";
 import Hmm from "./svg/wi-cloudy.svg";
 import Background from "./assets/bg.png";
@@ -39,7 +39,7 @@ export default function App() {
 
   useEffect(() => {
     fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=norway&days=3&aqi=yes&alerts=no`
+      `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=johor&days=3&aqi=yes&alerts=no`
     )
       .then((response) => response.json())
       .then((json) => setData(json));
@@ -64,7 +64,6 @@ export default function App() {
         }}
         imageStyle={{
           resizeMode: "cover",
-          marginBottom: 60,
         }}
       >
         <View
@@ -89,22 +88,31 @@ export default function App() {
                 width: "100%",
               }}
             >
-              <Text
-                style={{
-                  color: "white",
-                  fontFamily: "Nunito_700Bold",
-                  fontSize: 22,
-                }}
-                numberOfLines={1}
-              >
-                {data.location.name}
-                <Text style={{
-                  fontFamily: "Nunito_400Regular",
-                }}>
-                  {", "}
-                  {data.location.country}
+              <View style={{
+                flexDirection: "row",
+                alignItems: "center"
+              }}>
+                <FontAwesome5 name="map-marker-alt" size={20} color="white" />
+                <Text
+                  style={{
+                    color: "white",
+                    fontFamily: "Nunito_700Bold",
+                    fontSize: 22,
+                    marginLeft: 10,
+                  }}
+                  numberOfLines={1}
+                >
+                  <Text>{data.location.name}</Text>
+                  <Text
+                    style={{
+                      fontFamily: "Nunito_400Regular",
+                    }}
+                  >
+                    {", "}
+                    {data.location.country}
+                  </Text>
                 </Text>
-              </Text>
+              </View>
               <Pressable>
                 <Feather name="search" size={24} color="white" />
               </Pressable>
@@ -270,8 +278,8 @@ export default function App() {
         </View>
         <View
           style={{
-            backgroundColor: "white",
             width: "100%",
+            backgroundColor: "rgba(0,0,0,0.5)",
           }}
         >
           <View
@@ -286,7 +294,7 @@ export default function App() {
             <Text
               style={{
                 fontFamily: "Nunito_700Bold",
-                color: "#3F3F46",
+                color: "white",
                 fontSize: 22,
               }}
             >
@@ -295,7 +303,7 @@ export default function App() {
             <Text
               style={{
                 fontFamily: "Nunito_600SemiBold",
-                color: "#3F3F46",
+                color: "white",
                 fontSize: 16,
               }}
             >
@@ -330,7 +338,7 @@ export default function App() {
                     style={{
                       marginBottom: 12,
                       fontFamily: "Nunito_700Bold",
-                      color: "#3F3F46",
+                      color: "white",
                       fontSize: 13,
                     }}
                   >
@@ -352,7 +360,7 @@ export default function App() {
                     style={{
                       marginTop: 12,
                       fontFamily: "Nunito_700Bold",
-                      color: "#3F3F46",
+                      color: "white",
                       fontSize: 13,
                     }}
                   >

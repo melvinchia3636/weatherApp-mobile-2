@@ -86,7 +86,6 @@ import wiSmoke from "./wi-smoke.svg";
 import wiSnowWind from "./wi-snow-wind.svg";
 import wiSnow from "./wi-snow.svg";
 import wiSnowflakeCold from "./wi-snowflake-cold.svg";
-import wiSolarEclipse from "./wi-solar-eclipse.svg";
 import wiSprinkle from "./wi-sprinkle.svg";
 import wiStars from "./wi-stars.svg";
 import wiStormShowers from "./wi-storm-showers.svg";
@@ -185,7 +184,6 @@ export {
   wiSnowWind,
   wiSnow,
   wiSnowflakeCold,
-  wiSolarEclipse,
   wiSprinkle,
   wiStars,
   wiStormShowers,

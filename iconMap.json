@@ -12,31 +12,31 @@
 		"day" : "Partly cloudy",
 		"night" : "Partly cloudy",
     "dayIcon": "wi-day-cloudy",
-    "nightIcon": "wi-night-cloudy",
+    "nightIcon": "wi-night-alt-partly-cloudy",
 		"icon" : 116
 	},
 	{
 		"code" : 1006,
 		"day" : "Cloudy",
 		"night" : "Cloudy",
-    "dayIcon": "wi-day-cloudy",
-    "nightIcon": "wi-night-cloudy",
+    "dayIcon": "wi-cloudy",
+    "nightIcon": "wi-night-alt-cloudy",
 		"icon" : 119
 	},
 	{
 		"code" : 1009,
 		"day" : "Overcast",
 		"night" : "Overcast",
-    "dayIcon": "wi-day-cloudy",
-    "nightIcon": "wi-night-cloudy",
+    "dayIcon": "wi-cloudy",
+    "nightIcon": "wi-cloudy",
 		"icon" : 122
 	},
 	{
 		"code" : 1030,
 		"day" : "Mist",
 		"night" : "Mist",
-    "dayIcon": "wi-day-fog",
-    "nightIcon": "wi-night-fog",
+    "dayIcon": "wi-fog",
+    "nightIcon": "wi-fog",
 		"icon" : 143
 	},
 	{
@@ -44,7 +44,7 @@
 		"day" : "Patchy rain possible",
 		"night" : "Patchy rain possible",
     "dayIcon": "wi-day-rain",
-    "nightIcon": "wi-night-rain",
+    "nightIcon": "wi-night-alt-rain",
 		"icon" : 176
 	},
 	{
@@ -52,7 +52,7 @@
 		"day" : "Patchy snow possible",
 		"night" : "Patchy snow possible",
     "dayIcon": "wi-day-snow",
-    "nightIcon": "wi-night-snow",
+    "nightIcon": "wi-night-alt-snow",
 		"icon" : 179
 	},
 	{
@@ -60,7 +60,7 @@
 		"day" : "Patchy sleet possible",
 		"night" : "Patchy sleet possible",
     "dayIcon": "wi-day-sleet",
-    "nightIcon": "wi-night-sleet",
+    "nightIcon": "wi-night-alt-sleet",
 		"icon" : 182
 	},
 	{
@@ -68,15 +68,15 @@
 		"day" : "Patchy freezing drizzle possible",
 		"night" : "Patchy freezing drizzle possible",
     "dayIcon": "wi-day-sleet",
-    "nightIcon": "wi-night-sleet",
+    "nightIcon": "wi-night-alt-sleet",
 		"icon" : 185
 	},
 	{
 		"code" : 1087,
 		"day" : "Thundery outbreaks possible",
 		"night" : "Thundery outbreaks possible",
-    "dayIcon": "wi-day-thunderstorm",
-    "nightIcon": "wi-night-thunderstorm",
+    "dayIcon": "wi-day-lightning",
+    "nightIcon": "wi-night-alt-lightning",
 		"icon" : 200
 	},
 	{
@@ -84,7 +84,7 @@
 		"day" : "Blowing snow",
 		"night" : "Blowing snow",
     "dayIcon": "wi-day-snow",
-    "nightIcon": "wi-night-snow",
+    "nightIcon": "wi-snow",
 		"icon" : 227
 	},
 	{
@@ -92,55 +92,55 @@
 		"day" : "Blizzard",
 		"night" : "Blizzard",
     "dayIcon": "wi-day-snow",
-    "nightIcon": "wi-night-snow",
+    "nightIcon": "wi-snow",
 		"icon" : 230
 	},
 	{
 		"code" : 1135,
 		"day" : "Fog",
 		"night" : "Fog",
-    "dayIcon": "wi-day-fog",
-    "nightIcon": "wi-night-fog",
+    "dayIcon": "wi-fog",
+    "nightIcon": "wi-fog",
 		"icon" : 248
 	},
 	{
 		"code" : 1147,
 		"day" : "Freezing fog",
 		"night" : "Freezing fog",
-    "dayIcon": "wi-day-fog",
-    "nightIcon": "wi-night-fog",
+    "dayIcon": "wi-fog",
+    "nightIcon": "wi-fog",
 		"icon" : 260
 	},
 	{
 		"code" : 1150,
 		"day" : "Patchy light drizzle",
 		"night" : "Patchy light drizzle",
-    "dayIcon": "wi-day-sleet",
-    "nightIcon": "wi-night-sleet",
+    "dayIcon": "wi-sleet",
+    "nightIcon": "wi-sleet",
 		"icon" : 263
 	},
 	{
 		"code" : 1153,
 		"day" : "Light drizzle",
 		"night" : "Light drizzle",
-    "dayIcon": "wi-day-sleet",
-    "nightIcon": "wi-night-sleet",
+    "dayIcon": "wi-sleet",
+    "nightIcon": "wi-sleet",
 		"icon" : 266
 	},
 	{
 		"code" : 1168,
 		"day" : "Freezing drizzle",
 		"night" : "Freezing drizzle",
-    "dayIcon": "wi-day-sleet",
-    "nightIcon": "wi-night-sleet",
+    "dayIcon": "wi-sleet",
+    "nightIcon": "wi-sleet",
 		"icon" : 281
 	},
 	{
 		"code" : 1171,
 		"day" : "Heavy freezing drizzle",
 		"night" : "Heavy freezing drizzle",
-    "dayIcon": "wi-day-sleet",
-    "nightIcon": "wi-night-sleet",
+    "dayIcon": "wi-sleet",
+    "nightIcon": "wi-sleet",
 		"icon" : 284
 	},
 	{
@@ -148,7 +148,7 @@
 		"day" : "Patchy light rain",
 		"night" : "Patchy light rain",
     "dayIcon": "wi-day-rain",
-    "nightIcon": "wi-night-rain",
+    "nightIcon": "wi-night-alt-rain",
 		"icon" : 293
 	},
 	{
@@ -156,7 +156,7 @@
 		"day" : "Light rain",
 		"night" : "Light rain",
     "dayIcon": "wi-day-rain",
-    "nightIcon": "wi-night-rain",
+    "nightIcon": "wi-rain",
 		"icon" : 296
 	},
 	{
@@ -171,8 +171,8 @@
 		"code" : 1189,
 		"day" : "Moderate rain",
 		"night" : "Moderate rain",
-    "dayIcon": "wi-day-rain",
-    "nightIcon": "wi-night-rain",
+    "dayIcon": "wi-rain",
+    "nightIcon": "wi-rain",
 		"icon" : 302
 	},
 	{
@@ -180,47 +180,47 @@
 		"day" : "Heavy rain at times",
 		"night" : "Heavy rain at times",
     "dayIcon": "wi-day-rain",
-    "nightIcon": "wi-night-rain",
+    "nightIcon": "wi-night-alt-rain",
 		"icon" : 305
 	},
 	{
 		"code" : 1195,
 		"day" : "Heavy rain",
 		"night" : "Heavy rain",
-    "dayIcon": "wi-day-rain",
-    "nightIcon": "wi-night-rain",
+    "dayIcon": "wi-rain",
+    "nightIcon": "wi-rain",
 		"icon" : 308
 	},
 	{
 		"code" : 1198,
 		"day" : "Light freezing rain",
 		"night" : "Light freezing rain",
-    "dayIcon": "wi-day-sleet",
-    "nightIcon": "wi-night-sleet",
+    "dayIcon": "wi-sleet",
+    "nightIcon": "wi-sleet",
 		"icon" : 311
 	},
 	{
 		"code" : 1201,
 		"day" : "Moderate or heavy freezing rain",
 		"night" : "Moderate or heavy freezing rain",
-    "dayIcon": "wi-day-sleet",
-    "nightIcon": "wi-night-sleet",
+    "dayIcon": "wi-sleet",
+    "nightIcon": "wi-sleet",
 		"icon" : 314
 	},
 	{
 		"code" : 1204,
 		"day" : "Light sleet",
 		"night" : "Light sleet",
-    "dayIcon": "wi-day-sleet",
-    "nightIcon": "wi-night-sleet",
+    "dayIcon": "wi-sleet",
+    "nightIcon": "wi-sleet",
 		"icon" : 317
 	},
 	{
 		"code" : 1207,
 		"day" : "Moderate or heavy sleet",
 		"night" : "Moderate or heavy sleet",
-    "dayIcon": "wi-day-sleet",
-    "nightIcon": "wi-night-sleet",
+    "dayIcon": "wi-sleet",
+    "nightIcon": "wi-sleet",
 		"icon" : 320
 	},
 	{
@@ -228,15 +228,15 @@
 		"day" : "Patchy light snow",
 		"night" : "Patchy light snow",
     "dayIcon": "wi-day-snow",
-    "nightIcon": "wi-night-snow",
+    "nightIcon": "wi-night-alt-snow",
 		"icon" : 323
 	},
 	{
 		"code" : 1213,
 		"day" : "Light snow",
 		"night" : "Light snow",
-    "dayIcon": "wi-day-snow",
-    "nightIcon": "wi-night-snow",
+    "dayIcon": "wi-snow",
+    "nightIcon": "wi-snow",
 		"icon" : 326
 	},
 	{
@@ -244,15 +244,15 @@
 		"day" : "Patchy moderate snow",
 		"night" : "Patchy moderate snow",
     "dayIcon": "wi-day-snow",
-    "nightIcon": "wi-night-snow",
+    "nightIcon": "wi-night-alt-snow",
 		"icon" : 329
 	},
 	{
 		"code" : 1219,
 		"day" : "Moderate snow",
 		"night" : "Moderate snow",
-    "dayIcon": "wi-day-snow",
-    "nightIcon": "wi-night-snow",
+    "dayIcon": "wi-snow",
+    "nightIcon": "wi-snow",
 		"icon" : 332
 	},
 	{
@@ -260,23 +260,23 @@
 		"day" : "Patchy heavy snow",
 		"night" : "Patchy heavy snow",
     "dayIcon": "wi-day-snow",
-    "nightIcon": "wi-night-snow",
+    "nightIcon": "wi-night-alt-snow",
 		"icon" : 335
 	},
 	{
 		"code" : 1225,
 		"day" : "Heavy snow",
 		"night" : "Heavy snow",
-    "dayIcon": "wi-day-snow",
-    "nightIcon": "wi-night-snow",
+    "dayIcon": "wi-snow",
+    "nightIcon": "wi-snow",
 		"icon" : 338
 	},
 	{
 		"code" : 1237,
 		"day" : "Ice pellets",
 		"night" : "Ice pellets",
-    "dayIcon": "wi-day-snow",
-    "nightIcon": "wi-night-snow",
+    "dayIcon": "wi-snow",
+    "nightIcon": "wi-snow",
 		"icon" : 350
 	},
 	{
@@ -284,7 +284,7 @@
 		"day" : "Light rain shower",
 		"night" : "Light rain shower",
     "dayIcon": "wi-day-showers",
-    "nightIcon": "wi-night-showers",
+    "nightIcon": "wi-night-alt-showers",
 		"icon" : 353
 	},
 	{
@@ -292,7 +292,7 @@
 		"day" : "Moderate or heavy rain shower",
 		"night" : "Moderate or heavy rain shower",
     "dayIcon": "wi-day-showers",
-    "nightIcon": "wi-night-showers",
+    "nightIcon": "wi-night-alt-showers",
 		"icon" : 356
 	},
 	{
@@ -300,7 +300,7 @@
 		"day" : "Torrential rain shower",
 		"night" : "Torrential rain shower",
     "dayIcon": "wi-day-showers",
-    "nightIcon": "wi-night-showers",
+    "nightIcon": "wi-night-alt-showers",
 		"icon" : 359
 	},
 	{
@@ -308,7 +308,7 @@
 		"day" : "Light sleet showers",
 		"night" : "Light sleet showers",
     "dayIcon": "wi-day-sleet",
-    "nightIcon": "wi-night-sleet",
+    "nightIcon": "wi-night-alt-sleet",
 		"icon" : 362
 	},
 	{
@@ -316,7 +316,7 @@
 		"day" : "Moderate or heavy sleet showers",
 		"night" : "Moderate or heavy sleet showers",
     "dayIcon": "wi-day-sleet",
-    "nightIcon": "wi-night-sleet",
+    "nightIcon": "wi-night-alt-sleet",
 		"icon" : 365
 	},
 	{
@@ -324,7 +324,7 @@
 		"day" : "Light snow showers",
 		"night" : "Light snow showers",
     "dayIcon": "wi-day-snow",
-    "nightIcon": "wi-night-snow",
+    "nightIcon": "wi-night-alt-snow",
 		"icon" : 368
 	},
 	{
@@ -332,7 +332,7 @@
 		"day" : "Moderate or heavy snow showers",
 		"night" : "Moderate or heavy snow showers",
     "dayIcon": "wi-day-snow",
-    "nightIcon": "wi-night-snow",
+    "nightIcon": "wi-night-alt-snow",
 		"icon" : 371
 	},
 	{
@@ -340,7 +340,7 @@
 		"day" : "Light showers of ice pellets",
 		"night" : "Light showers of ice pellets",
     "dayIcon": "wi-day-snow",
-    "nightIcon": "wi-night-snow",
+    "nightIcon": "wi-night-alt-snow",
 		"icon" : 374
 	},
 	{
@@ -348,39 +348,39 @@
 		"day" : "Moderate or heavy showers of ice pellets",
 		"night" : "Moderate or heavy showers of ice pellets",
     "dayIcon": "wi-day-snow",
-    "nightIcon": "wi-night-snow",
+    "nightIcon": "wi-night-alt-snow",
 		"icon" : 377
 	},
 	{
 		"code" : 1273,
 		"day" : "Patchy light rain with thunder",
 		"night" : "Patchy light rain with thunder",
-    "dayIcon": "wi-day-rain-mix",
-    "nightIcon": "wi-night-rain-mix",
+    "dayIcon": "wi-day-lightning",
+    "nightIcon": "wi-night-alt-lightning",
 		"icon" : 386
 	},
 	{
 		"code" : 1276,
 		"day" : "Moderate or heavy rain with thunder",
 		"night" : "Moderate or heavy rain with thunder",
-    "dayIcon": "wi-day-rain-mix",
-    "nightIcon": "wi-night-rain-mix",
+    "dayIcon": "wi-lightning",
+    "nightIcon": "wi-lightning",
 		"icon" : 389
 	},
 	{
 		"code" : 1279,
 		"day" : "Patchy light snow with thunder",
 		"night" : "Patchy light snow with thunder",
-    "dayIcon": "wi-day-snow",
-    "nightIcon": "wi-night-snow",
+    "dayIcon": "wi-day-snow-thunderstorm",
+    "nightIcon": "wi-night-alt-snow-thunderstorm",
 		"icon" : 392
 	},
 	{
 		"code" : 1282,
 		"day" : "Moderate or heavy snow with thunder",
 		"night" : "Moderate or heavy snow with thunder",
-    "dayIcon": "wi-day-snow",
-    "nightIcon": "wi-night-snow",
+    "dayIcon": "wi-day-snow-thunderstorm",
+    "nightIcon": "wi-night-alt-snow-thunderstorm",
 		"icon" : 395
 	}
 ]
