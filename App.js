@@ -21,6 +21,8 @@ import Hmm from "./svg/wi-cloudy.svg";
 import Background from "./assets/bg.png";
 import iconMap from "./iconMap.json";
 import * as Icons from "./svg";
+import { MotiText, MotiView } from "moti";
+import { Easing } from "react-native-reanimated";
 
 Text.defaultProps = Text.defaultProps || {};
 Text.defaultProps.allowFontScaling = false;
@@ -88,16 +90,18 @@ export default function App() {
                 width: "100%",
               }}
             >
-              <View style={{
-                flexDirection: "row",
-                alignItems: "center"
-              }}>
+              <View
+                style={{
+                  flexDirection: "row",
+                  alignItems: "center",
+                }}
+              >
                 <FontAwesome5 name="map-marker-alt" size={20} color="white" />
                 <Text
                   style={{
                     color: "white",
                     fontFamily: "Nunito_700Bold",
-                    fontSize: 22,
+                    fontSize: 20,
                     marginLeft: 10,
                   }}
                   numberOfLines={1}
@@ -117,7 +121,21 @@ export default function App() {
                 <Feather name="search" size={24} color="white" />
               </Pressable>
             </View>
-            <Text
+            <MotiText
+              from={{ opacity: 0, translateY: 100 }}
+              animate={{ opacity: 1, translateY: 0 }}
+              exit={{ opacity: 0, translateY: 100 }}
+              delay={100}
+              transition={{
+                type: "timing",
+                easing: Easing.inOut(Easing.ease),
+                opacity: {
+                  duration: 700,
+                },
+                translateY: {
+                  duration: 500,
+                },
+              }}
               style={{
                 color: "white",
                 fontFamily: "Nunito_600SemiBold",
@@ -130,17 +148,45 @@ export default function App() {
               }}
             >
               {data.current.temp_c}°
-            </Text>
-            <Text
+            </MotiText>
+            <MotiText
               style={{
                 color: "white",
                 fontFamily: "Nunito_500Medium",
                 fontSize: 20,
               }}
+              from={{ opacity: 0, translateY: 100 }}
+              animate={{ opacity: 1, translateY: 0 }}
+              exit={{ opacity: 0, translateY: 100 }}
+              delay={300}
+              transition={{
+                type: "timing",
+                easing: Easing.inOut(Easing.ease),
+                opacity: {
+                  duration: 700,
+                },
+                translateY: {
+                  duration: 500,
+                },
+              }}
             >
               {data.current.condition.text}
-            </Text>
-            <View
+            </MotiText>
+            <MotiView
+              from={{ opacity: 0, translateY: 100 }}
+              animate={{ opacity: 1, translateY: 0 }}
+              exit={{ opacity: 0, translateY: 100 }}
+              delay={500}
+              transition={{
+                type: "timing",
+                easing: Easing.inOut(Easing.ease),
+                opacity: {
+                  duration: 700,
+                },
+                translateY: {
+                  duration: 500,
+                },
+              }}
               style={{
                 flexDirection: "row",
                 marginTop: 32,
@@ -221,8 +267,22 @@ export default function App() {
                   UV Index
                 </Text>
               </View>
-            </View>
-            <View
+            </MotiView>
+            <MotiView
+              from={{ opacity: 0, translateY: 100 }}
+              animate={{ opacity: 1, translateY: 0 }}
+              exit={{ opacity: 0, translateY: 100 }}
+              delay={700}
+              transition={{
+                type: "timing",
+                easing: Easing.inOut(Easing.ease),
+                opacity: {
+                  duration: 700,
+                },
+                translateY: {
+                  duration: 500,
+                },
+              }}
               style={{
                 flexDirection: "row",
                 marginTop: 32,
@@ -272,14 +332,29 @@ export default function App() {
                   {data.forecast.forecastday[0].day.mintemp_c}°C
                 </Text>
               </View>
-            </View>
+            </MotiView>
           </View>
           <StatusBar translucent backgroundColor="transparent" />
         </View>
-        <View
+        <MotiView
+          from={{ opacity: 0.0, translateY: 1000 }}
+          animate={{ opacity: 1, translateY: 0 }}
+          exit={{ opacity: 0.0, translateY: 1000 }}
+          delay={500}
+          transition={{
+            type: "timing",
+            duration: 1000,
+            easing: Easing.inOut(Easing.ease),
+            opacity: {
+              delay: 500,
+            },
+          }}
           style={{
             width: "100%",
             backgroundColor: "rgba(0,0,0,0.5)",
+            position: "absolute",
+            bottom: 0,
+            left: 0,
           }}
         >
           <View
@@ -370,7 +445,7 @@ export default function App() {
               ))}
             </ScrollView>
           </View>
-        </View>
+        </MotiView>
       </ImageBackground>
     </View>
   ) : null;
