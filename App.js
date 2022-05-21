@@ -17,9 +17,8 @@ import {
 } from "@expo-google-fonts/dev";
 import { FontAwesome, FontAwesome5, Feather } from "@expo/vector-icons";
 import moment from "moment";
-import Hmm from "./svg/wi-cloudy.svg";
 import Background from "./assets/bg.png";
-import iconMap from "./iconMap.json";
+import iconMap from "./svg/iconMap.json";
 import * as Icons from "./svg";
 import { MotiText, MotiView } from "moti";
 import { Easing } from "react-native-reanimated";
