@@ -37,6 +37,7 @@ function MiscValue() {
         ['UV Index', data.current.uv],
       ].map(([label, value]) => (
         <View
+          key={label}
           style={{
             flex: 1,
           }}

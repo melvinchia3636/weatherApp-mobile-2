@@ -16,6 +16,7 @@ import {
   Nunito_600SemiBold,
   Nunito_700Bold,
 } from '@expo-google-fonts/dev';
+import { Provider } from 'react-native-paper';
 import Background from './assets/bg.png';
 import Hourly from './components/Hourly';
 import TopSection from './components/TopSection';
@@ -46,32 +47,34 @@ export default function App() {
   }, []);
 
   return data && fontsLoaded ? (
-    <DataContext.Provider value={{ data, setData }}>
-      <View
-        style={{
-          flex: 1,
-          width: '100%',
-          backgroundColor: 'white',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}
-      >
-        <ImageBackground
-          source={Background}
+    <Provider>
+      <DataContext.Provider value={{ data, setData }}>
+        <View
           style={{
             flex: 1,
             width: '100%',
-            justifyContent: 'center',
-          }}
-          imageStyle={{
-            resizeMode: 'cover',
+            backgroundColor: 'white',
+            alignItems: 'center',
+            justifyContent: 'space-between',
           }}
         >
-          <TopSection />
-          <Hourly />
-        </ImageBackground>
-        <StatusBar translucent backgroundColor="transparent" />
-      </View>
-    </DataContext.Provider>
+          <ImageBackground
+            source={Background}
+            style={{
+              flex: 1,
+              width: '100%',
+              justifyContent: 'center',
+            }}
+            imageStyle={{
+              resizeMode: 'cover',
+            }}
+          >
+            <TopSection />
+            <Hourly />
+          </ImageBackground>
+          <StatusBar translucent backgroundColor="transparent" />
+        </View>
+      </DataContext.Provider>
+    </Provider>
   ) : null;
 }

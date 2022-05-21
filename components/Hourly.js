@@ -2,18 +2,32 @@
 /* eslint-disable import/no-cycle */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-filename-extension */
-import { View, Text, ScrollView } from 'react-native';
+import {
+  View, Text, ScrollView, Pressable,
+} from 'react-native';
 import React, { useContext } from 'react';
 import { MotiView } from 'moti';
 import { Easing } from 'react-native-reanimated';
 import moment from 'moment';
+import {
+  Entypo,
+} from '@expo/vector-icons';
+import { Menu } from 'react-native-paper';
+import Svg, { Path } from 'react-native-svg';
 import { DataContext } from '../App';
 
 import iconMap from '../svg/iconMap.json';
 import * as Icons from '../svg';
 
+const DAYS = ['Today', 'Tomorrow', 'Day after tomorrow'];
+
 function Hourly() {
   const { data } = useContext(DataContext);
+  const [visible, setVisible] = React.useState(false);
+  const [selectedDate, setSelectedDate] = React.useState(0);
+
+  const openMenu = () => setVisible(true);
+  const closeMenu = () => setVisible(false);
 
   return (
     <MotiView
@@ -46,15 +60,85 @@ function Hourly() {
           padding: 20,
         }}
       >
-        <Text
-          style={{
-            fontFamily: 'Nunito_700Bold',
-            color: 'white',
-            fontSize: 22,
-          }}
+        <View style={{
+          flex: 1,
+        }}
         >
-          Today
-        </Text>
+          <Menu
+            visible={visible}
+            onDismiss={closeMenu}
+            anchor={(
+              <Pressable
+                onPress={openMenu}
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  width: '90%',
+                }}
+              >
+                <Text
+                  style={{
+                    fontFamily: 'Nunito_700Bold',
+                    color: 'white',
+                    fontSize: 22,
+                  }}
+                >
+                  {DAYS[selectedDate]}
+                </Text>
+                <Entypo
+                  name="chevron-down"
+                  size={20}
+                  color="white"
+                  style={{
+                    marginTop: 4,
+                    marginLeft: 8,
+                  }}
+                />
+              </Pressable>
+          )}
+          >
+            {data.forecast.forecastday.map((day, index) => (
+              <Menu.Item
+                key={day.date_epoch}
+                onPress={() => {
+                  setSelectedDate(index);
+                  closeMenu();
+                }}
+                title={(
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                    }}
+                  >
+                    <Text style={{
+                      fontFamily: 'Nunito_700Bold',
+                      fontSize: 16,
+                      width: 166,
+                    }}
+                    >
+                      {DAYS[index]}
+                    </Text>
+                    {index === selectedDate && (
+                    <Svg
+                      style={{
+                        marginTop: 2,
+                      }}
+                      width={24}
+                      height={24}
+                      preserveAspectRatio="xMidYMid meet"
+                      viewBox="0 0 24 24"
+                    >
+                      <Path fill="black" d="M18.71 7.21a1 1 0 0 0-1.42 0l-7.45 7.46l-3.13-3.14A1 1 0 1 0 5.29 13l3.84 3.84a1 1 0 0 0 1.42 0l8.16-8.16a1 1 0 0 0 0-1.47Z" />
+                    </Svg>
+                    )}
+                  </View>
+              )}
+              />
+            ))}
+          </Menu>
+        </View>
         <Text
           style={{
             fontFamily: 'Nunito_600SemiBold',
@@ -62,7 +146,7 @@ function Hourly() {
             fontSize: 16,
           }}
         >
-          {moment(data.forecast.forecastday[0].date_epoch * 1000).format(
+          {moment(data.forecast.forecastday[selectedDate].date_epoch * 1000).format(
             'ddd, MMMM DD',
           )}
         </Text>
@@ -81,7 +165,7 @@ function Hourly() {
             paddingHorizontal: 20,
           }}
         >
-          {data.forecast.forecastday[0].hour.map((item, index) => (
+          {data.forecast.forecastday[selectedDate].hour.map((item, index) => (
             <View
               key={item.time_epoch}
               style={{
