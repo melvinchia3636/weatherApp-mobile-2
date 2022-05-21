@@ -33,14 +33,8 @@ function Appbar() {
       <View
         key="location"
         style={{
-          ...{
-            flexDirection: 'row',
-            alignItems: 'center',
-          },
-          ...(searchBarOpen ? { width: 0, opacity: 0 } : {
-            width: '90%',
-            opacity: 1,
-          }),
+          flexDirection: 'row',
+          alignItems: 'center',
         }}
       >
         <FontAwesome5 name="map-marker-alt" size={20} color="white" />
@@ -80,10 +74,7 @@ function Appbar() {
       <View
         key="searchbox"
         style={{
-          ...{
-            flex: 1,
-          },
-          ...(searchBarOpen ? { width: '100%', opacity: 1 } : { width: 0, opacity: 0 }),
+          flex: 1,
         }}
       >
         <TextInput
@@ -97,6 +88,7 @@ function Appbar() {
             fontSize: 16,
           }}
           placeholderTextColor="white"
+          selectionColor="white"
         />
       </View>
       )}

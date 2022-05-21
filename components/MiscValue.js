@@ -31,83 +31,37 @@ function MiscValue() {
         marginTop: 32,
       }}
     >
-      <View
-        style={{
-          flex: 1,
-        }}
-      >
-        <Text
+      {[
+        ['Humidity', `${data.current.humidity}%`],
+        ['Wind Speed', `${data.current.wind_kph}km/h`],
+        ['UV Index', data.current.uv],
+      ].map(([label, value]) => (
+        <View
           style={{
-            color: 'white',
-            fontFamily: 'Nunito_500Medium',
-            textAlign: 'center',
-            fontSize: 24,
+            flex: 1,
           }}
         >
-          {data.current.humidity}
-          %
-        </Text>
-        <Text
-          style={{
-            color: 'white',
-            textAlign: 'center',
-            fontFamily: 'Nunito_400Regular',
-          }}
-        >
-          Humidity
-        </Text>
-      </View>
-      <View
-        style={{
-          flex: 1,
-        }}
-      >
-        <Text
-          style={{
-            color: 'white',
-            fontFamily: 'Nunito_500Medium',
-            textAlign: 'center',
-            fontSize: 24,
-          }}
-        >
-          {data.current.wind_kph}
-          km/h
-        </Text>
-        <Text
-          style={{
-            color: 'white',
-            textAlign: 'center',
-            fontFamily: 'Nunito_400Regular',
-          }}
-        >
-          Wind Speed
-        </Text>
-      </View>
-      <View
-        style={{
-          flex: 1,
-        }}
-      >
-        <Text
-          style={{
-            color: 'white',
-            fontFamily: 'Nunito_500Medium',
-            textAlign: 'center',
-            fontSize: 24,
-          }}
-        >
-          {data.current.uv}
-        </Text>
-        <Text
-          style={{
-            color: 'white',
-            textAlign: 'center',
-            fontFamily: 'Nunito_400Regular',
-          }}
-        >
-          UV Index
-        </Text>
-      </View>
+          <Text
+            style={{
+              color: 'white',
+              fontFamily: 'Nunito_500Medium',
+              textAlign: 'center',
+              fontSize: 24,
+            }}
+          >
+            {value}
+          </Text>
+          <Text
+            style={{
+              color: 'white',
+              textAlign: 'center',
+              fontFamily: 'Nunito_400Regular',
+            }}
+          >
+            {label}
+          </Text>
+        </View>
+      ))}
     </MotiView>
   );
 }
